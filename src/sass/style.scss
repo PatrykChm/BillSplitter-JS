@@ -1,0 +1,114 @@
+@import 'colors';
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background-color: rgb(186, 224, 218);
+	width: 100%;
+	height: 100vh;
+	font-family: 'Space Mono', monospace;
+
+	.wrapper {
+		margin-right: auto;
+		margin-left: auto;
+		max-width: 1200px;
+		padding-right: 10px;
+		padding-left: 10px;
+		width: 100%;
+		height: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+
+		.error {
+			display: none;
+		}
+
+		.bill-card {
+			display: flex;
+			flex-direction: column;
+			width: 90%;
+			height: 80%;
+			border: 1px solid black;
+			border-radius: 20px;
+			padding: 20px;
+			background-color: $white;
+			//  ------------------------------------------------SEKCJA Z INPUTAMI-------------------<<<<<<<<<<<<
+			&__datas {
+				height: 60%;
+				width: 100%;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-evenly;
+			}
+			//  ------------------------------------------------INPUTY
+			&__classic-input {
+				display: flex;
+				flex-direction: column;
+			}
+			&__input {
+				height: 40px;
+				width: 100%;
+				border-radius: 5px;
+				padding: 5px;
+				border: 1px solid $borderColor;
+				text-align: right;
+				font-size: 22px;
+			}
+			//  ------------------------------------------------LABELE
+			&__label {
+				font-size: 18px;
+				margin-bottom: 8px;
+				font-weight: 500;
+			}
+
+			//  ------------------------------------------------BUTTONY TIP
+			// sekcja
+			&__tip {
+				display: flex;
+				flex-direction: row;
+				flex-wrap: wrap;
+				justify-content: center;
+				padding: 10px 0;
+				// input custom
+				input {
+					width: 40%;
+					height: 45px;
+					margin: 5px;
+					border-radius: 5px;
+					border: 1px solid $borderColor;
+					text-align: center;
+					&::placeholder {
+						text-align: center;
+						font-family: 'Space Mono', monospace;
+						font-size: 16px;
+					}
+				}
+			}
+			// buttony
+			&__tip-button {
+				font-family: 'Space Mono', monospace;
+				width: 40%;
+				height: 45px;
+				margin: 5px;
+				font-size: 20px;
+				background-color: $secondColor;
+				color: $white;
+				border: none;
+				border-radius: 5px;
+			}
+
+			//  ------------------------------------------------SEKCJA Z KALKULACJAMI----------------<<<<<<<<<<<<
+			&__calculations {
+				height: 40%;
+				width: 100%;
+				background-color: $secondColor;
+				border-radius: 10px;
+			}
+		}
+	}
+}

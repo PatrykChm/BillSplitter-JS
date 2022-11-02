@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bill Splitter</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="dist/css/style.min.css">
+</head>
+
+<body>
+
+    <div class="wrapper">
+
+
+
+
+        <div class="bill-card">
+
+            <div class="bill-card__datas">
+
+                <div class="bill-card__classic-input">
+                    <label for="bill-sum" class="bill-card__label">Bill</label>
+                    <input type="number" class="bill-card__input" id="bill-sum" placeholder="$0">
+                </div>
+
+
+
+                <div class="bill-card__tip">
+                    <button class="bill-card__tip-button" value="5">5%</button>
+                    <button class="bill-card__tip-button" value="10">10%</button>
+                    <button class="bill-card__tip-button" value="15">15%</button>
+                    <button class="bill-card__tip-button" value="25">25%</button>
+                    <button class="bill-card__tip-button" value="50">50%</button>
+                    <input placeholder="CUSTOM" type="number">
+
+                </div>
+
+
+
+                <div class="bill-card__classic-input">
+                    <p class="error">Can't be zero</p>
+                    <label for="people-sum" class="bill-card__label">Number of People</label>
+                    <input type="number" class="bill-card__input" id="people-sum" placeholder="0">
+                </div>
+
+
+
+
+            </div>
+
+            <div class="bill-card__calculations">
+
+            </div>
+
+
+        </div>
+
+
+
+
+
+
+
+
+
+    </div>
+
+    <script src="dist/js/main.min.js"></script>
+</body>
+
+</html>
