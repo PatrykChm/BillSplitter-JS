@@ -30,14 +30,17 @@
 
 
 
-                <div class="bill-card__tip">
-                    <button class="bill-card__tip-button" value="5">5%</button>
-                    <button class="bill-card__tip-button" value="10">10%</button>
-                    <button class="bill-card__tip-button" value="15">15%</button>
-                    <button class="bill-card__tip-button" value="25">25%</button>
-                    <button class="bill-card__tip-button" value="50">50%</button>
-                    <input placeholder="CUSTOM" type="number">
 
+                <div class="bill-card__tip">
+                    <label for="" class="bill-card__label">Select Tip %</label>
+                    <div class="buttons">
+                        <button class="bill-card__tip-button" value="5">5%</button>
+                        <button class="bill-card__tip-button" value="10">10%</button>
+                        <button class="bill-card__tip-button" value="15">15%</button>
+                        <button class="bill-card__tip-button" value="25">25%</button>
+                        <button class="bill-card__tip-button" value="50">50%</button>
+                        <input placeholder="CUSTOM" type="number">
+                    </div>
                 </div>
 
 
@@ -54,7 +57,20 @@
             </div>
 
             <div class="bill-card__calculations">
+                <div class="bill-card__text-box">
 
+                    <div class="bill-card__tip-amount">
+                        <p class="bill-card__text">Tip Amount</p>
+                        <p class="bill-card__number">$0</p>
+                    </div>
+                    <div class="bill-card__total">
+                        <p class="bill-card__text">Total</p>
+                        <p class="bill-card__number">$0</p>
+                    </div>
+
+
+                </div>
+                <button class="bill-card__reset-button">RESET</button>
             </div>
 
 

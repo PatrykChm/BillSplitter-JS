@@ -39,7 +39,7 @@ body {
 			background-color: $white;
 			//  ------------------------------------------------SEKCJA Z INPUTAMI-------------------<<<<<<<<<<<<
 			&__datas {
-				height: 60%;
+				height: 70%;
 				width: 100%;
 				display: flex;
 				flex-direction: column;
@@ -69,14 +69,10 @@ body {
 			//  ------------------------------------------------BUTTONY TIP
 			// sekcja
 			&__tip {
-				display: flex;
-				flex-direction: row;
-				flex-wrap: wrap;
-				justify-content: center;
 				padding: 10px 0;
 				// input custom
 				input {
-					width: 40%;
+					width: 46%;
 					height: 45px;
 					margin: 5px;
 					border-radius: 5px;
@@ -90,24 +86,95 @@ body {
 				}
 			}
 			// buttony
+
+			.buttons {
+				display: flex;
+				flex-wrap: wrap;
+				align-items: center;
+				justify-content: center;
+				margin-top: 8px;
+			}
 			&__tip-button {
 				font-family: 'Space Mono', monospace;
-				width: 40%;
+				width: 46%;
 				height: 45px;
 				margin: 5px;
 				font-size: 20px;
+				border-radius: 5px;
+				cursor: pointer;
 				background-color: $secondColor;
 				color: $white;
 				border: none;
-				border-radius: 5px;
+				transition: color 0.3s, background-color 0.3s;
+
+				&:focus {
+					color: $secondColor;
+					background-color: $mainColor;
+					font-weight: bold;
+				}
 			}
 
 			//  ------------------------------------------------SEKCJA Z KALKULACJAMI----------------<<<<<<<<<<<<
 			&__calculations {
-				height: 40%;
+				height: 30%;
 				width: 100%;
 				background-color: $secondColor;
 				border-radius: 10px;
+				padding: 20px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+
+			&__text-box {
+				display: flex;
+				flex-direction: column;
+				justify-content: center;
+				align-items: center;
+			}
+			&__tip-amount {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+				margin-bottom: 15px;
+			}
+
+			&__total {
+				display: flex;
+				width: 100%;
+				justify-content: space-between;
+			}
+			&__reset-button {
+				text-align: center;
+				cursor: pointer;
+				height: 25%;
+				border-radius: 10px;
+				border: none;
+				background-color: $mainColor;
+				color: $secondColor;
+				font-weight: bold;
+				font-size: 18px;
+			}
+
+			&__text {
+				font-size: 16px;
+				color: $white;
+				position: relative;
+
+				&::after {
+					content: '/person';
+					position: absolute;
+					left: 0;
+					top: 26px;
+					font-size: 11px;
+					color: $darkGrey;
+				}
+			}
+
+			&__number {
+				color: $mainColor;
+				font-size: 32px;
+				font-weight: bold;
 			}
 		}
 	}
