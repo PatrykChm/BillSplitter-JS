@@ -11,170 +11,220 @@ body {
 	width: 100%;
 	height: 100vh;
 	font-family: 'Space Mono', monospace;
+}
+.wrapper {
+	margin-right: auto;
+	margin-left: auto;
+	max-width: 1200px;
+	padding-right: 10px;
+	padding-left: 10px;
+	width: 100%;
+	height: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
-	.wrapper {
-		margin-right: auto;
-		margin-left: auto;
-		max-width: 1200px;
-		padding-right: 10px;
-		padding-left: 10px;
-		width: 100%;
-		height: 100%;
+	.error {
+		display: none;
+	}
+
+	.bill-card {
 		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		.error {
-			display: none;
-		}
-
-		.bill-card {
+		flex-direction: column;
+		width: 90%;
+		height: 80%;
+		box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+		border-radius: 20px;
+		padding: 20px;
+		background-color: $white;
+		//  ------------------------------------------------SEKCJA Z INPUTAMI-------------------<<<<<<<<<<<<
+		&__datas {
+			height: 70%;
+			width: 100%;
 			display: flex;
 			flex-direction: column;
-			width: 90%;
-			height: 80%;
-			border: 1px solid black;
-			border-radius: 20px;
-			padding: 20px;
-			background-color: $white;
-			//  ------------------------------------------------SEKCJA Z INPUTAMI-------------------<<<<<<<<<<<<
-			&__datas {
-				height: 70%;
-				width: 100%;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-evenly;
-			}
-			//  ------------------------------------------------INPUTY
-			&__classic-input {
-				display: flex;
-				flex-direction: column;
-			}
-			&__input {
-				height: 40px;
-				width: 100%;
-				border-radius: 5px;
-				padding: 5px;
-				border: 1px solid $borderColor;
-				text-align: right;
-				font-size: 22px;
-			}
-			//  ------------------------------------------------LABELE
-			&__label {
-				font-size: 18px;
-				margin-bottom: 8px;
-				font-weight: 500;
-			}
+			justify-content: space-evenly;
+		}
+		//  ------------------------------------------------INPUTY
+		&__classic-input {
+			display: flex;
+			flex-direction: column;
+		}
+		&__input {
+			height: 40px;
+			width: 100%;
+			border-radius: 5px;
+			padding: 5px;
+			border: 1px solid $borderColor;
+			text-align: right;
+			font-size: 22px;
+		}
+		//  ------------------------------------------------LABELE
+		&__label {
+			font-size: 18px;
+			margin-bottom: 8px;
+			font-weight: 500;
+		}
 
-			//  ------------------------------------------------BUTTONY TIP
-			// sekcja
-			&__tip {
-				padding: 10px 0;
-				// input custom
-				input {
-					width: 46%;
-					height: 45px;
-					margin: 5px;
-					border-radius: 5px;
-					border: 1px solid $borderColor;
-					text-align: center;
-					&::placeholder {
-						text-align: center;
-						font-family: 'Space Mono', monospace;
-						font-size: 16px;
-					}
-				}
-			}
-			// buttony
-
-			.buttons {
-				display: flex;
-				flex-wrap: wrap;
-				align-items: center;
-				justify-content: center;
-				margin-top: 8px;
-			}
-			&__tip-button {
-				font-family: 'Space Mono', monospace;
+		//  ------------------------------------------------BUTTONY TIP
+		// sekcja
+		&__tip {
+			padding: 10px 0;
+			// input custom
+			input {
 				width: 46%;
 				height: 45px;
 				margin: 5px;
-				font-size: 20px;
 				border-radius: 5px;
-				cursor: pointer;
-				background-color: $secondColor;
-				color: $white;
-				border: none;
-				transition: color 0.3s, background-color 0.3s;
+				border: 1px solid $borderColor;
+				text-align: center;
+				&::placeholder {
+					text-align: center;
+					font-family: 'Space Mono', monospace;
+					font-size: 16px;
+				}
+			}
+		}
+		// buttony
 
-				&:focus {
-					color: $secondColor;
-					background-color: $mainColor;
-					font-weight: bold;
+		.buttons {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			justify-content: center;
+			margin-top: 8px;
+		}
+		&__tip-button {
+			font-family: 'Space Mono', monospace;
+			width: 46%;
+			height: 45px;
+			margin: 5px;
+			font-size: 20px;
+			border-radius: 5px;
+			cursor: pointer;
+			background-color: $secondColor;
+			color: $white;
+			border: none;
+			transition: color 0.3s, background-color 0.3s;
+
+			&:focus {
+				color: $secondColor;
+				background-color: $mainColor;
+				font-weight: bold;
+			}
+		}
+
+		//  ------------------------------------------------SEKCJA Z KALKULACJAMI----------------<<<<<<<<<<<<
+		&__calculations {
+			height: 30%;
+			width: 100%;
+			background-color: $secondColor;
+			border-radius: 10px;
+			padding: 20px;
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+		}
+
+		&__text-box {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+		}
+		&__tip-amount {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+			margin-bottom: 15px;
+		}
+
+		&__total {
+			display: flex;
+			width: 100%;
+			justify-content: space-between;
+		}
+		&__reset-button {
+			text-align: center;
+			cursor: pointer;
+			height: 25%;
+			border-radius: 10px;
+			border: none;
+			background-color: $mainColor;
+			color: $secondColor;
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+		&__text {
+			font-size: 16px;
+			color: $white;
+			position: relative;
+
+			&::after {
+				content: '/person';
+				position: absolute;
+				left: 0;
+				top: 26px;
+				font-size: 11px;
+				color: $darkGrey;
+			}
+		}
+
+		&__number {
+			color: $mainColor;
+			font-size: 32px;
+			font-weight: bold;
+		}
+	}
+}
+
+@media (min-width: 1200px) {
+	.wrapper {
+		.bill-card {
+			width: 100%;
+			height: 50%;
+			flex-direction: row;
+
+			&__datas {
+				width: 50%;
+				height: 100%;
+			}
+
+			&__tip-button {
+				width: 25%;
+			}
+			&__tip {
+				input {
+					width: 25%;
 				}
 			}
 
-			//  ------------------------------------------------SEKCJA Z KALKULACJAMI----------------<<<<<<<<<<<<
 			&__calculations {
-				height: 30%;
-				width: 100%;
-				background-color: $secondColor;
-				border-radius: 10px;
-				padding: 20px;
-				display: flex;
-				flex-direction: column;
-				justify-content: space-between;
+				width: 50%;
+				height: 100%;
+				margin-left: 20px;
+				padding: 40px;
 			}
-
 			&__text-box {
-				display: flex;
-				flex-direction: column;
-				justify-content: center;
-				align-items: center;
+				margin-top: 10px;
 			}
-			&__tip-amount {
-				display: flex;
-				width: 100%;
-				justify-content: space-between;
-				margin-bottom: 15px;
-			}
-
-			&__total {
-				display: flex;
-				width: 100%;
-				justify-content: space-between;
-			}
-			&__reset-button {
-				text-align: center;
-				cursor: pointer;
-				height: 25%;
-				border-radius: 10px;
-				border: none;
-				background-color: $mainColor;
-				color: $secondColor;
-				font-weight: bold;
-				font-size: 18px;
-			}
-
 			&__text {
-				font-size: 16px;
-				color: $white;
-				position: relative;
-
+				font-size: 32px;
 				&::after {
-					content: '/person';
-					position: absolute;
-					left: 0;
-					top: 26px;
-					font-size: 11px;
-					color: $darkGrey;
+					top: 52px;
+					font-size: 16px;
 				}
 			}
 
 			&__number {
-				color: $mainColor;
-				font-size: 32px;
-				font-weight: bold;
+				font-size: 56px;
+			}
+
+			&__reset-button {
+				height: 60px;
+				font-size: 24px;
+				border-radius: 6px;
 			}
 		}
 	}
