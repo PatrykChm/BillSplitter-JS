@@ -27,6 +27,9 @@ body {
 	.error {
 		display: none;
 	}
+	.error-active {
+		display: block;
+	}
 
 	.bill-card {
 		display: flex;

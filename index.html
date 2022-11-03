@@ -25,10 +25,20 @@
 
                 <div class="bill-card__classic-input">
                     <label for="bill-sum" class="bill-card__label">Bill</label>
-                    <input type="number" class="bill-card__input" id="bill-sum" placeholder="$0">
+                    <input type="number" class="bill-card__input bill-card-bill" id="bill-sum" placeholder="$0">
                 </div>
 
 
+
+
+
+
+
+                <div class="bill-card__classic-input">
+                    <p class="error">Can't be zero</p>
+                    <label for="people-sum" class="bill-card__label">Number of People</label>
+                    <input type="number" class="bill-card__input bill-card-people" id="people-sum" placeholder="0">
+                </div>
 
 
                 <div class="bill-card__tip">
@@ -39,19 +49,9 @@
                         <button class="bill-card__tip-button" value="15">15%</button>
                         <button class="bill-card__tip-button" value="25">25%</button>
                         <button class="bill-card__tip-button" value="50">50%</button>
-                        <input placeholder="CUSTOM" type="number">
+                        <input placeholder="CUSTOM" type="number" class="custom-tip">
                     </div>
                 </div>
-
-
-
-                <div class="bill-card__classic-input">
-                    <p class="error">Can't be zero</p>
-                    <label for="people-sum" class="bill-card__label">Number of People</label>
-                    <input type="number" class="bill-card__input" id="people-sum" placeholder="0">
-                </div>
-
-
 
 
             </div>
@@ -86,7 +86,7 @@
 
     </div>
 
-    <script src="dist/js/main.min.js"></script>
+    <script src=".././dist/js/mian.min.js"></script>
 </body>
 
 </html>
